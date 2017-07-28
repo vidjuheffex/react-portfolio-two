@@ -7,6 +7,8 @@ import BaseLayout from './containers/BaseLayout';
 import Home from './containers/Home';
 import Portfolio from './containers/Portfolio';
 import About from './containers/About';
+import Contact from './containers/Contact';
+import References from './containers/References';
 
 class App extends Component {
   constructor(props){
@@ -31,6 +33,18 @@ class App extends Component {
         path: "/",
         component: Home,
         bg: "/elmo.jpg"
+      },{
+        order: 4,
+        label: "Contact",
+        path: "/contact",
+        component: Contact,
+        bg: "/ernie.jpg"
+      },{
+        order: 5,
+        label: "References",
+        path: "/references",
+        component: References,
+        bg: "/cookie.jpg"
       }]
     };
   }
@@ -42,7 +56,7 @@ class App extends Component {
   render() {
     let routes = this.state.routes.map((e, i) =>{
       return (
-        <Route key={i} path = {e.path} component={e.component}/>
+        <Route key={i} exact path = {e.path} component={e.component}/>
       );
     });
     

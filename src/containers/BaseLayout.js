@@ -18,7 +18,7 @@ class BaseLayout extends Component {
         backgroundSize: "cover",
         backgroundPositionX: "center",
         backgroundPositionY: "center",
-        position: 'relative',
+        position: 'relative'
       },
       page: {
         position: 'absolute',
@@ -27,7 +27,6 @@ class BaseLayout extends Component {
         right:0,
         bottom:0,
         zIndex: 0,
-        color: 'white',
         boxSizing: 'border-box',
         overflow: 'auto'
       },

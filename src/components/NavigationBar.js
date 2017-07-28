@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Radium from 'radium';
 
-var Link = require('react-router-dom').Link;
-Link = Radium(Link);
+var NavLink = require('react-router-dom').NavLink;
+NavLink = Radium(NavLink);
 
 class NavigationBar extends Component {  
   render(){
@@ -20,7 +20,6 @@ class NavigationBar extends Component {
         color: 'white',
         textDecoration: 'none',
         cursor: 'default',
-
         ":hover": {
           textDecoration: 'underline'
         }
@@ -33,7 +32,7 @@ class NavigationBar extends Component {
         })
         .map((e, i) => {
           return(
-            <Link key={i} to={e.path} style={style.links}>{e.label}</Link>
+              <NavLink  style={style.links} activeStyle={{textDecoration: 'underline'}} key={i} exact to={e.path} >{e.label}</NavLink>
           );
         });
     
